@@ -10,8 +10,7 @@ before_script:
 
 after_success:
   - .buildscript/deploy_snapshot.sh
-  - pip install coverage
-  - coveralls
+  - mvn coveralls:jacoco
 
 env:
   global:
